@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Main from './pages/Main'
+import { useState, useEffect } from 'react'
+import Quiz from './pages/Quiz';
+import Result from './pages/Result';
+import data from './quizs/quiz1.json'
 
 function App() {
+  const [page, setPage] = useState<String>('main')
+  const [answers, setAnswers] = useState<object>({})
+  const [component, setComponent] = useState(<Main setPage={setPage} setAnswers={setAnswers} />)
+  useEffect(() => {
+    switchPage();
+  }, [page])
+  
+  const [timeTaken, setTimeTaken] = useState<number>(data.time)
+
+  const switchPage = () => {
+    switch (page) {
+      case 'main':
+        setComponent(<Main setPage={setPage} setAnswers={setAnswers} />)
+        return
+      case 'quiz':
+        setComponent(<Quiz setPage={setPage}  setTimeTaken={setTimeTaken}  setAnswers={setAnswers} />)
+        return
+      case 'result':
+        setComponent(<Result answers={answers} timeTaken={timeTaken} setPage={setPage} />)
+        return
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {component}
     </div>
   );
 }

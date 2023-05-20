@@ -1,0 +1,122 @@
+{
+    "name": "The Daily Quiz on React",
+    "noOfQuestion": 5,
+    "time": 60,
+    "passPercentage" : 60,
+    "description": "This React Proficiency Test is designed to evaluate an individual's knowledge and skills in using React. It covers a wide range of topics including hooks, components and everything covered in react docs",
+    "questions": [
+        {
+            "id": 101,
+            "question": "Is React a framework or library?",
+            "options": [
+                {
+                    "id": "1011",
+                    "value": "Framework"
+                },
+                {
+                    "id": "1012",
+                    "value": "Library"
+                },
+                {
+                    "id": "1013",
+                    "value": "Both Framework and Library"
+                },
+                {
+                    "id": "1014",
+                    "value": "None of them"
+                }
+            ],
+            "answerId": "1012"
+        },
+        {
+            "id" : 102,
+            "question": "What is command use to create react app",
+            "options": [
+                {
+                    "id": "1021",
+                    "value": "npm <app-name> createReactApp"
+                },
+                {
+                    "id": "1022",
+                    "value": "npm createReactApp <app-name>"
+                },
+                {
+                    "id": "1023",
+                    "value": "npm create-react-app <app-name>"
+                },
+                {
+                    "id": "1024",
+                    "value": "npx create-react-app <app-name>"
+                }
+            ],
+            "answerId": "1024"
+        },
+        {
+            "id" : 103,
+            "question": "How many elements can a valid react component return?",
+            "options": [
+                {
+                    "id": "1031",
+                    "value": "1"
+                },
+                {
+                    "id": "1032",
+                    "value": "2"
+                },
+                {
+                    "id": "1033",
+                    "value": "As many as the developer wants"
+                },
+                {
+                    "id": "1034",
+                    "value": "10"
+                }
+            ],
+            "answerId": "1031"
+        },{
+            "id" : 104,
+            "question" : "What are arbitrary inputs of components in react also known as?",
+            "options": [
+                {
+                    "id": "1041",
+                    "value": "Elements"
+                },
+                {
+                    "id": "1042",
+                    "value": "Props"
+                },
+                {
+                    "id": "1043",
+                    "value": "Keys"
+                },
+                {
+                    "id": "1044",
+                    "value": "Ref"
+                }
+            ],
+            "answerId": "1042"
+        },{
+            "id" : 105,
+            "question" : "Which of the following function is used to change the state of react component?",
+            "options": [
+                {
+                    "id": "1051",
+                    "value": "this.state()"
+                },
+                {
+                    "id": "1052",
+                    "value": "this.getState()"
+                },
+                {
+                    "id": "1053",
+                    "value": "this.setState()"
+                },
+                {
+                    "id": "1054",
+                    "value": "None of the above"
+                }
+            ],
+            "answerId": "1053"
+        }
+    ]
+}
