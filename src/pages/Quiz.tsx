@@ -18,7 +18,7 @@ function Quiz(props: any) {
             setTime(prev => {
                 if (prev <= 0) {
                     clearInterval(interval)
-                    setTimeTaken(prev)
+                    setTimeTaken(data.time-prev)
                     setModalOpen1(true)
                     return prev
                 }
@@ -177,7 +177,7 @@ function Quiz(props: any) {
                     <Button
                         variant="contained"
                         onClick={() => {
-                            setTimeTaken(time)
+                            setTimeTaken(data.time-time)
                             props.setPage('result')
                         }} > Check Result </Button>
                 </Box>

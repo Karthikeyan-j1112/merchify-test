@@ -8,8 +8,8 @@ function Result(props: any) {
   const { timeTaken, answers } = props
 
   const [score, setScore] = useState<number>(0)
-  const [precent, setPercent] = useState<number>(0)
-  useEffect(() => {
+  const [precent, setPercent] = useState<number>(0)  
+  useEffect(() => {    
     if (answers) {
       for (let ques of quiz.questions) {
         const selectedAns = answers[ques.id]
@@ -43,7 +43,7 @@ function Result(props: any) {
           <ArrowBackRoundedIcon />
         </IconButton >
       </Stack>
-      <Stack spacing={3} sx={{ bgcolor: '#f2def9' }}  paddingBottom='20px' >
+      <Stack spacing={3} sx={{ bgcolor: '#f2def9' }} paddingBottom='20px' >
         <Typography
           variant="h6"
           fontWeight='600'
@@ -85,7 +85,7 @@ function Result(props: any) {
             width={{
               xs: '90%',
               md: '45%'
-            }}                        
+            }}
             alignItems='center'
           >
             <Stack spacing={0} direction='row' width='100%' divider={<Divider orientation="vertical" flexItem />} >
