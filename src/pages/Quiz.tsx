@@ -22,7 +22,7 @@ function Quiz(props: any) {
                     setModalOpen1(true)
                     return prev
                 }
-                return prev - 0.5
+                return prev - 1
             })
         }, 1000)
     }, [])

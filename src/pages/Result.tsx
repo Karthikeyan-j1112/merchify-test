@@ -15,7 +15,7 @@ function Result(props: any) {
         const selectedAns = answers[ques.id]
         console.log(selectedAns);
         if (selectedAns === ques.answerId) {
-          setScore(prev => prev + 0.5)
+          setScore(prev => prev + 1)
         }
       }
     }
